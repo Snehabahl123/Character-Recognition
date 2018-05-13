@@ -7,6 +7,30 @@ name = "pypi"
 
 [packages]
 gunicorn="*"
+Flask=1.0.2
+Flask-Uploads=0.2.1
+gensim=2.3.0
+genson=0.2.1
+gunicorn=19.8.1
+h5py=2.7.0
+html5lib=0.9999999
+jsonpickle=0.9.6
+Keras=2.0.6
+matplotlib=2.0.2
+numpy=1.13.1
+pandas=0.20.2
+pipenv=11.10.4
+pygame=1.9.3
+python-resize-image=1.1.11
+scikit-learn=0.18.2
+scipy=0.19.1
+seaborn=0.7.1
+sklearn=0.0
+spacy==1.9.0
+tensorflow==1.2.1
+Theano==0.9.0
+torch==0.1.12.post2
+Werkzeug==0.14.1
 
 [requires]
 python_full_version = "2.7.15"
