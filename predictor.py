@@ -17,7 +17,7 @@ def predict(input_image_name):
     fd_img.close()
 
     # Load the Keras CNN trained model
-    model = load_model('try.h5')
+    model = load_model('model.h5')
 
     ################# NEW Algorithm with Adaptive Threshold #########################################
     # Read image in grayscale mode
