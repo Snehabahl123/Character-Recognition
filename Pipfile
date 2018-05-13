@@ -14,7 +14,7 @@ sklearn="*"
 matplotlib="*"
 Pillow="*"
 python-resize-image="*"
-python-opencv
+python-opencv="*"
 
 [requires]
 python_full_version = "2.7.15"
