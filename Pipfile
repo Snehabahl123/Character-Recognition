@@ -6,9 +6,14 @@ name = "pypi"
 
 
 [packages]
-Flask="*"
+flask="*"
 numpy="*"
 keras="*"
+cv2="*"
+sklearn="*"
+matplotlib="*"
+PIL="*"
+resizeimage="*"
 
 
 [requires]
