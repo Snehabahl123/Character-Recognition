@@ -16,6 +16,8 @@ matplotlib="*"
 Pillow="*"
 python-resize-image="*"
 opencv-python="*"
+libsm6="*"
+libxext6="*"
 
 
 [requires]
