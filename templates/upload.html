@@ -2,13 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Upload</title>
+    <title>Character Recognizer</title>
+<style>
+.b{
+padding: 12px 28px;
+border-radius: 12px;
+font-size: 16px;
+text-align: center;
+cursor: pointer;
+margin: 5px;
+}
+
+.b:hover
+{
+background-color: #10779B
+
+}
+
+</style>
 </head>
-<body>
-<h1>File Uploader</h1>
-<form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
-  <input type="file" name="file" accept="image/*" multiple/>
-  <input type="submit" value="Send"/>
+<body style="background-color:#BDE8F7;">
+<p style="text-align:center;color:#900C3F;font-size:40px"><b><u><i>Character Recognizer</u></i></b></p>
+
+<p style="margin-left:3%;">The character recognizer detects the alphanumeric characters present in an image.<br> I have used the vgg19 model to train my data set as it gives good results for image classification problems. <p>
+
+<h3 > Model </h3>
+<img src="vgg19.png" width=40% alt="model" style="margin-left:5%;"></img>
+<p> This network is characterized by its simplicity, using only 3×3 convolutional layers stacked on top of each other in increasing depth. Reducing volume size is handled by max pooling. Two fully-connected layers, each with 4,096 nodes are then followed by a softmax classifier (above).
+
+</p>
+
+<h4> Convolutional Layer </h4>
+<p>
+It’s parameters consist of set of learnable filters. Every filter is small spatially but extends through the full depth of input volume.<br>
+During the forward pass, we slide each filter across width and height of the input at any position.<br>
+As we slide the filter we will produce a 2-d activation map that gives the responses of that filter at every spatial position.<br>
+We stack these activation maps along the depth dimension and produce the output volume. 
+</p>
+
+<h4> Activation </h4>
+<p>
+After each conv layer it is a convention to apply a non-linear layer immediately. The purpose of this layer is to introduce nonlinearity to a system that basically has just been computing linear operations during the conv layers.<br>
+ReLU works better because network is able to train a lot faster without making a significant change in accuracy. It also helps alleviate the vanishing gradient problem. 
+</p>
+
+
+<h4>Pooling Layer</h4>
+<p>
+It is also reffered to as downsampling layer.<br>
+It takes a filter and a stride of same length.<br>
+It then applies it to the input volume and outputs the maximum number in every subregion that the filter convolves around.<br>
+It helps control overfitting.
+</p>
+
+
+<h4>Dropout Layers</h4>
+<p>
+The weights of the network get so tuned to the training examples that the network doesn’t perform well when new examples are given.<br>
+This layer “drops out” a random set of activations in that layer by setting them to zero.<br>
+It forces the network to be redundant.
+</p>
+
+
+<h4>Flattening</h4>
+<p>
+The last stage of a CNN is a classifier. It is called the dense layer, whivh is just an ANN classifier.<br>
+The ANN classifier needs a feature vector.
+</p>
+
+<h1 style="text-align:center;color:#900C3F;"> Try it out </h1>
+<form id="upload-form"style="text-align:center;" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data" >
+  <input type="file" style="font-size:16px;"name="file" accept="image/*" multiple/>
+  <input type="submit" class=b value="Send"/>
 </form>
 </body>
 </html>
