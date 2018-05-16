@@ -22,10 +22,11 @@ def upload():
         print(file)
         filename = file.filename
         destination = "/".join([target, filename])
+        fname="static/resized_" + filename
         print(destination)
         file.save(destination)
         result_image_name = predict(filename)
-    return render_template("result.html", result = result_image_name, original=filename)
+    return render_template("result.html", result = result_image_name, original=fname)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
