@@ -9,10 +9,10 @@ from PIL import Image
 from resizeimage import resizeimage
 
 def predict(input_image_name):
-    fd_img = open("images/" + input_image_name, 'rb')            #pic path
+    fd_img = open("static/" + input_image_name, 'rb')            #pic path
     img = Image.open(fd_img)
     img = resizeimage.resize_thumbnail(img, [400, 500])
-    resized_image = "images/resized_" + input_image_name
+    resized_image = "static/resized_" + input_image_name
     img.save(resized_image, img.format)  #pic path
     fd_img.close()
 
