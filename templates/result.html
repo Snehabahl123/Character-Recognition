@@ -6,11 +6,11 @@
 <p style="text-align:center;color:#900C3F;font-size:40px"><b><u><i>Result</u></i></b></p>
 </head>
 
-<body style="background-color:#BDE8F7; margin-left:5%;">
-<h2> Original image </h2>
-<img src=""> 
+<body>
+<h2 style="text-align:center;" > Original image </h2>
+<img src="{{ url_for('static', filename=original) }}" align="center"></img>
 
-<h2> Resulting image </h2>
-<img src="{{ url_for('static', filename=result) }}"></img>
+<h2 style="text-align:center;"> Resulting image </h2>
+<img src="{{ url_for('static', filename=result) }}" align="center"></img>
 </body>
 </html>

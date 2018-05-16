@@ -12,7 +12,7 @@ def index():
 
 @app.route("/upload", methods=["POST"])
 def upload():
-    target = os.path.join(APP_ROOT, 'images/')
+    target = os.path.join(APP_ROOT, 'static/')
     print(target)
 
     if not os.path.isdir(target):
@@ -25,7 +25,7 @@ def upload():
         print(destination)
         file.save(destination)
         result_image_name = predict(filename)
-    return render_template("result.html", result = result_image_name,original=destination)
+    return render_template("result.html", result = result_image_name, original=filename)
 
 if __name__ == "__main__":
     app.run(debug = True)
