@@ -135,7 +135,7 @@ software-center-aptd-plugins==0.0.0
 spacy==1.9.0
 subprocess32==3.2.7
 tabulate==0.7.7
-tensorflow==1.2.1
+tensorflow==2.5.0
 termcolor==1.1.0
 terminado==0.6
 testpath==0.3.1
