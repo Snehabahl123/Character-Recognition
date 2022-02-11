@@ -148,7 +148,7 @@ tornado==4.5.1
 tqdm==4.15.0
 traitlets==4.3.2
 trollius==2.0.1
-Twisted==16.0.0
+Twisted==22.1.0
 txaio==1.0.0
 ubuntuone-client-data==14.4
 ujson==1.35
