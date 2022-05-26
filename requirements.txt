@@ -151,7 +151,7 @@ trollius==2.0.1
 Twisted==16.0.0
 txaio==1.0.0
 ubuntuone-client-data==14.4
-ujson==1.35
+ujson==5.2.0
 unity-lens-photos==1.0
 urllib3==1.22
 virtualenv==15.2.0
